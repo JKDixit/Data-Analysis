@@ -1,0 +1,31 @@
+import pandas as pd
+import pandas_ai
+
+# Load the IPL 2023 data into a Pandas DataFrame
+df = pd.read_csv('ipl_2023_data.csv')
+
+# Prompt 7: Who are three new players Gujrat picked?
+print(pandas_ai.run(df, prompt="Who are three new players Gujrat picked? "))
+
+# Prompt 8: What is total money spent by all teams in dollars?
+print(pandas_ai.run(df, prompt="What is total money spent by all teams in dollars? "))
+
+# Prompt 9: Bar graph for Money spent by Mumbai Indians on each type of player
+prompts = "Bar graph for Money spent by Mumbai Indians on each type of player"
+print(pandas_ai.run(df, prompt=prompts))
+
+# Prompt 10: Bar plot showing money spent on each type of player by Gujrat Titans
+prompts = "Bar plot showing money spent on each type of player by Gujrat Titans"
+print(pandas_ai.run(df, prompt=prompts))
+
+# Prompt 11: Can you predict which team will buy Sam Curran in 2024?
+print(pandas_ai.run(df, prompt="Can you predict which team will buy Sam Curran in 2024? "))
+
+# Prompt 12: Can you predict which team will spend the highest money in 2024?
+print(pandas_ai.run(df, prompt="Can you predict which team will spend the highest money in 2024? "))
+
+# Prompt 13: Perform univariate analysis
+print(pandas_ai.run(df, prompt="Perform univariate analysis"))
+
+# Prompt 14: Perform multivariate analysis
+print(pandas_ai.run(df, prompt="Perform multivariate analysis"))
